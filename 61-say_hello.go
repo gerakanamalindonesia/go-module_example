@@ -11,12 +11,22 @@ package go_say_hello
 
 /*
 * Upgrade Module
-* Jika kita ingin mengupdate modul kita maka kita hanya perlu membuat tag baru
+* Jika kita ingin mengupdate modul kita maka kita hanya perlu membuat tag baru lalu kita push
 */
-func SayHello(name string) string {
+
+/*
+* Major Upgrade
+* Sebenarnya hal ini sebisa mungkin dihindari, karena dapat merusak kode
+* Namun jika memang terpaksa dan harus melakukan perusakan code (artinya adalah major upgrade) maka
+  strategi yang dapat kita gunakan adalah mengubah nama module
+* Misal seperti ini "github.com/gerakanamalindonesia/go-module_example" kita ubah menjadi "github.com/gerakanamalindonesia/go-module_example/v2",
+  harapannya dalah ketika ada yang mengakses "github.com/gerakanamalindonesia/go-module_example" maka mereka akan mendapakan yagn v1
+*/
+
+func SayHello(address string) string {
 	// Sebelum diupgrade module-nya
 	//return "Hello gan"
 
 	// Setelah upgrade module
-	return (name)
+	return (address)
 }
